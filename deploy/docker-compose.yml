@@ -1,0 +1,19 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: askarkg12/audio-frontend:latest
+    labels:
+      - "traefik.http.routers.audio.rule=Host(`audio.sulaiman-ov.com`)"
+    networks:
+      - traefik_default
+  # backend:
+  #   build:
+  #     context: ./backend
+  #     dockerfile: Dockerfile
+  #   image: askarkg12/audio-backend:latest
+
+networks:
+  traefik_default:
+    external: true
