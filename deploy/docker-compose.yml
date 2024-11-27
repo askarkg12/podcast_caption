@@ -6,9 +6,9 @@ services:
     image: askarkg12/audio-frontend:latest
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.audio.rule=Host(`audio.sulaiman-ov.com`)"
-      - "traefik.http.routers.audio.entrypoints=websecure"
-      - "traefik.http.routers.audio.tls.certresolver=letsencrypt"
+      - "${TRAEFIK_LABEL1}"
+      - "${TRAEFIK_LABEL2}"
+      - "${TRAEFIK_LABEL3}"
     networks:
       - traefik_default
   # backend:
