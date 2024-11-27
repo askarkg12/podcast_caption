@@ -5,7 +5,10 @@ services:
       dockerfile: Dockerfile
     image: askarkg12/audio-frontend:latest
     labels:
+      - "traefik.enable=true"
       - "traefik.http.routers.audio.rule=Host(`audio.sulaiman-ov.com`)"
+      - "traefik.http.routers.audio.entrypoints=websecure"
+      - "traefik.http.routers.audio.tls.certresolver=letsencrypt"
     networks:
       - traefik_default
   # backend:
