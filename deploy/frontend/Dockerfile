@@ -9,4 +9,4 @@ EXPOSE 80
 
 COPY app/ app/
 
-CMD ["streamlit", "run", "app/app.py", "--server.port", "80"]
+CMD ["streamlit", "run", "app/sound.py", "--server.port", "80"]

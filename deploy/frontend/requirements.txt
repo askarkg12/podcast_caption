@@ -1,1 +1,6 @@
 streamlit
+streamlit-webrtc
+pydub
+soundfile
+matplotlib
+twilio
